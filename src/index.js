@@ -253,23 +253,23 @@ function checkGamepad() {
         B: gamepad.buttons[1].pressed,
     };
 
-    if (!wasPressed.left && isPressed.left) {
+    if (!this.wasPressed.left && isPressed.left) {
         shiftTetrimino(fallingTetrimino, { x: -1, y: 0 });
     }
 
-    if (!wasPressed.right && isPressed.right) {
+    if (!this.wasPressed.right && isPressed.right) {
         shiftTetrimino(fallingTetrimino, { x: 1, y: 0 });
     }
 
-    if (!wasPressed.down && isPressed.down) {
+    if (!this.wasPressed.down && isPressed.down) {
         shiftTetrimino(fallingTetrimino, { x: 0, y: -1 });
     }
 
-    if (!wasPressed.A && isPressed.A) {
+    if (!this.wasPressed.A && isPressed.A) {
         rotateCounterClockwise(fallingTetrimino);
     }
 
-    if (!wasPressed.B && isPressed.B) {
+    if (!this.wasPressed.B && isPressed.B) {
         rotateClockwise(fallingTetrimino);
     }
 
